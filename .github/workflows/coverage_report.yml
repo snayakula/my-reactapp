@@ -26,5 +26,5 @@ jobs:
        EMAIL_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
        RECIPIENT: ${{ secrets.SMTP_TO_EMAIL }}
      run: |
-       echo "Code coverage report" | mutt -s "Coverage Report" -a ./coverage.txt -- $RECIPIENT
+       echo "Code coverage report" | mutt -s "Coverage Report" -a coverage.txt -- $RECIPIENT
       #  echo "Code coverage report" | mutt -s "Coverage Report" -a ./coverage/lcov-report/index.html -- $RECIPIENT
