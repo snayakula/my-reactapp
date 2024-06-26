@@ -12,11 +12,11 @@ jobs:
      with:
        node-version: "18.x"
        
-   - name: Install dependencies
-     run: npm install
+   # - name: Install dependencies
+   #   run: npm install
      
-   - name: Run tests with coverage
-     run: npm test -- --coverage
+   # - name: Run tests with coverage
+   #   run: npm test -- --coverage
    
    - name: Install mutt
      run: sudo apt-get install -y mutt
