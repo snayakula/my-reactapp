@@ -15,8 +15,8 @@ jobs:
    # - name: Install dependencies
    #   run: npm install
      
-   # - name: Run tests with coverage
-   #   run: npm test -- --coverage
+   - name: Run tests with coverage
+     run: npm test -- --coverage
    
    - name: Install mutt
      run: sudo apt-get install -y mutt
@@ -26,4 +26,5 @@ jobs:
        EMAIL_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
        RECIPIENT: ${{ secrets.SMTP_TO_EMAIL }}
      run: |
-       echo "Code coverage report" | mutt -s "Coverage Report" -a ./coverage/lcov-report/index.html -- $RECIPIENT
+       echo "Code coverage report" | mutt -s "Coverage Report" -a ./coverage -- $RECIPIENT
+      #  echo "Code coverage report" | mutt -s "Coverage Report" -a ./coverage/lcov-report/index.html -- $RECIPIENT
